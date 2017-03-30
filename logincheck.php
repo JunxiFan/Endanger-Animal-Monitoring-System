@@ -16,7 +16,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
         $DB_PORT = '3306';
         $DB_USER = 'root';
         $DB_PASS = '';
-        $DB_NAME = 'angularcode_task';
+        $DB_NAME = 'endanger_animal';
         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
         // Check connection
         if (mysqli_connect_errno()) {
@@ -53,7 +53,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
             if ($row[2] == "admin") {
                 $_SESSION['web'] = 'gallery.php';
             } elseif ($row[2] == "tech") {
-                $_SESSION['web'] = 'contact.php';
+                $_SESSION['web'] = 'techstaff.php';
 
             }
             header('location:../' . $_SESSION['web']);

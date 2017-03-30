@@ -117,26 +117,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
                     <li>
-                        <h3>Formal education</h3>
-                        <p>Education is the process of facilitating learning. Knowledge, skills, values, beliefs, and
-                            habits of a group of people are transferred to other people, through storytelling.</p>
+                        <h3>Rahat Ashfaq Kazi</h3>
+                        <p></p>
                         <div class="readmore">
                             <a href="about.php">Read More<i class="glyphicon glyphicon-menu-right"> </i></a>
                         </div>
                     </li>
                     <li>
-                        <h3>Self-directed learning</h3>
-                        <p>Learning Education is the process of facilitating learning. Knowledge, skills, values,
-                            beliefs, and habits of a group of people are transferred to other people, through
-                            storytelling.</p>
+                        <h3>Junxi Fan</h3>
+                        <p></p>
                         <div class="readmore">
                             <a href="about.php">Read More<i class="glyphicon glyphicon-menu-right"> </i></a>
                         </div>
                     </li>
                     <li>
-                        <h3>Learning modalities</h3>
-                        <p>Storytelling Education is the process of facilitating learning. Knowledge, skills, values,
-                            beliefs, and habits of a group of people are transferred to other people, through.</p>
+                        <h3>Kaixin Gao</h3>
+                        <p></p>
+                        <div class="readmore">
+                            <a href="about.php">Read More<i class="glyphicon glyphicon-menu-right"> </i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Taotao Jing</h3>
+                        <p></p>
+                        <div class="readmore">
+                            <a href="about.php">Read More<i class="glyphicon glyphicon-menu-right"> </i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Zhixin Wang</h3>
+                        <p></p>
                         <div class="readmore">
                             <a href="about.php">Read More<i class="glyphicon glyphicon-menu-right"> </i></a>
                         </div>

@@ -5,7 +5,7 @@
  * Date: 2017/3/28
  * Time: 20:36
  */
-session_start();
+//session_start();
 if (isset($_SESSION['id'])) {
     unset($_SESSION['id']);
     unset($_SESSION['username']);
@@ -23,11 +23,6 @@ if (isset($_SESSION['id'])) {
 }
 ?>
 
-<input id="btnClientRegister" class="button_1" name="submit" type="button" value="取消"
-       onclick="window.location.href='/dangdang/cart/cart_toCart.action'"/>
 
-<input id="btnClientRegister" class="button_1" name="submit" type="button" value="下一步"
-
-       onclick="window.location.href='/dangdang/order/toAddress.action'"/>
 
 

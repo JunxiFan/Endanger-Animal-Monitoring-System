@@ -50,7 +50,7 @@ div#bs-example-navbar-collapse-1 {
 }
 /*--header-nav--*/
 .header{
-    background-color: #E1009F;
+    background-color: #025d12;
     border: none;
     padding: .6em 0em 1.8em;
     margin: 0;
@@ -64,8 +64,8 @@ div#bs-example-navbar-collapse-1 {
     margin-bottom: 0 !important;
 }
 .navbar-default {
-    background-color: #E1009F !important;
-    border-color: #E1009F !important;
+    background-color: #025d12 !important;
+    border-color: #025d12 !important;
 }
 .navbar-header a.navbar-brand {
 	color: #fff;
