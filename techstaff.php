@@ -94,6 +94,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2>Technical Staff Page</h2>
     </div>
 </div>
+<div class="col-sm-3 col-lg-3">
+    <div class="sidebar-nav">
+        <div>
+            <br><br>
+            <ul class="nav nav-pills nav-stacked main-menu text-center">
+                <li><a href="test.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Install</span></a>
+                </li>
+                <li><a href="install.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Recycle</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="main col-lg-8 col-sm-8">
+    <!-- content starts -->
+    <table>
+        <!--<tr><td class="header"><div><h1>Header</h1></div></td></tr>-->
+        <tr>
+            <td class="content">
+                <iframe name="readmore" width="1000" height="900" frameborder="2" scrolling="yes"
+                        src="typography.php" id="accountframe"></iframe>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<!--<script>-->
+<!--    function display() {-->
+<!--        document.getElementById("accountframe").style.display = "block";-->
+<!--    }-->
+<!---->
+<!--    $(document).ready(function () {-->
+<!--        var b = $(window).height(); //gets the window's height, change the selector if you are looking for height relative to some other element-->
+<!--        $("#content").css("height", b);-->
+<!--    });-->
+<!--</script>-->
 
 </body>
 </html>
