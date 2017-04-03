@@ -1,14 +1,14 @@
-<!--/**-->
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: fjx19-->
-<!-- * Date: 2017/3/29-->
-<!-- * Time: 12:02-->
-<!-- */-->
+/**
+* Created by IntelliJ IDEA.
+* User: fjx19
+* Date: 2017/4/2
+* Time: 18:25
+*/
 <!doctype html>
 <html>
 <head>
 
-    <title>Analyst</title>
+    <title>Technical Staff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <?php
                     session_start();
-                    echo "<li><a href=\"#\"><span class=\"glyphicon glyphicon-user\">Welcome, {$_SESSION['username']}!</span></a></li>";
+                    echo "<li><a href=\"#\"><span class=\"glyphicon glyphicon-user\">Welcome, {$_SESSION['firstname']} {$_SESSION['lastname']}!</span></a></li>";
                     ?>
                     <!--                    <li><span class=\"glyphicon glyphicon-user\"></span> {$_SESSION['username']}</li>-->
                     <div class="login-pop">
@@ -90,10 +90,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="clearfix"></div>
 </div>
 <div class="banner banner5">
-    <div class="container">
-        <h2>Analyst Page</h2>
+    <div class="container" align="center">
+        <h2>Manager Page</h2>
     </div>
 </div>
 
+<div class="col-sm-3 col-lg-3">
+    <div class="sidebar-nav">
+        <div>
+            <br><br>
+            <ul class="nav nav-pills nav-stacked main-menu text-center">
+                <li><a href="mngadd.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Animals</span></a>
+                </li>
+                <li><a href="install.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Manage staff</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="main col-lg-8 col-sm-8">
+    <!-- content starts -->
+    <table>
+        <!--<tr><td class="header"><div><h1>Header</h1></div></td></tr>-->
+        <tr>
+            <td class="content">
+                <iframe name="readmore" width="1000" height="600" frameborder="2" scrolling="yes"
+                        src="../deals/whitepage.php" id="accountframe"></iframe>
+            </td>
+        </tr>
+    </table>
+
+</div>
 </body>
 </html>

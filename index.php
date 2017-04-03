@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="login-pop">
                 <div id="loginpop"><a href="#" id="loginButton"><span>Login</span></a>
                     <div id="loginBox">
-                        <form role="form" id="loginForm" action="logincheck.php" method="post">
+                        <form role="form" id="loginForm" action="deals/logincheck.php" method="post">
                             <fieldset id="body">
                                 <fieldset>
                                     <label for="email">Username</label>

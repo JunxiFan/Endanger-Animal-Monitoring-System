@@ -52,41 +52,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"> </span>
                     <span class="icon-bar"> </span>
                 </button>
-                <h1><a class="navbar-brand" href="index.html">Education<br/><span>Tutorial</span></a></h1>
+                <h1><a class="navbar-brand" href="index.php">Aqua<br/><span>Endanger Animals monitoring</span></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
-                    <li><a href="index.html"><span data-hover="Home">Home</span></a></li>
-                    <li><a href="about.html"><span data-hover="About">About</span></a></li>
-                    <li><a href="typography.html"><span data-hover="Shortcodes">Shortcodes</span></a></li>
-                    <li><a href="gallery.html"><span data-hover="Gallery">Gallery</span></a></li>
-                    <li><a href="contact.html"><span data-hover="Contact">Contact</span></a></li>
+                    <li><a href="index.php"><span data-hover="Home">Home</span></a></li>
+                    <li><a href="about.php"><span data-hover="About">About</span></a></li>
+                    <!--								<li><a href="typography.php"><span data-hover="Shortcodes">Shortcodes</span></a></li>-->
+                    <!--								<li><a href="gallery.php"><span data-hover="Gallery">Gallery</span></a></li>-->
+                    <li><a href="contact.php"><span data-hover="Contact">Contact</span></a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div><!-- /.navbar-collapse -->
             <!-- /.container-fluid -->
-            <div class="login-pop">
-                <div id="loginpop"><a href="#" id="loginButton"><span>Login</span></a>
-                    <div id="loginBox">
-                        <form id="loginForm">
-                            <fieldset id="body">
-                                <fieldset>
-                                    <label for="email">Email Address</label>
-                                    <input type="text" id="email">
-                                </fieldset>
-                                <fieldset>
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password">
-                                </fieldset>
-                                <input type="submit" id="login" value="Sign in">
-                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-                            </fieldset>
-                            <span><a href="#">Forgot your password?</a></span>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
             <script src="js/menu_jquery.js"></script>
         </div>
     </nav>
@@ -96,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Top Navigation -->
 <div class="banner banner5">
     <div class="container">
-        <h2>About</h2>
+        <h2>About our Project</h2>
     </div>
 </div>
 <!--header-->
@@ -105,172 +85,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="about-info-grids">
             <div class="col-md-5 abt-pic">
-                <img src="images/abt.jpg" class="img-responsive" alt=""/>
+                <img src="images/aqua.jpg" class="img-responsive" alt=""/>
             </div>
             <div class="col-md-7 abt-info-pic">
-                <h3>Vestibulum congue neque quis ex fringilla, in pellentesque massa gravida.</h3>
-                <p>Mauris tempus lorem nec ex facilisis suscipit. Phasellus pretium rutrum augue, eu rutrum
-                    lacus lobortis rutrum. Etiam a sem et velit sollicitudin placerat. Maecenas tincidunt
-                    justo ligula, sit amet maximus dolor iaculis quis. Sed laoreet cursus posuere.
-                    Pellentesque commodo odio in luctus interdum.</p>
-                <ul>
-                    <li>Proin et ligula ut nulla laoreet posuere.</li>
-                    <li>Sed vestibulum magna vel egestas feugiat.</li>
-                    <li>Curabitur nec erat eu lorem gravida aliquet.</li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="testimonals">
-            <h3>Testimonials</h3>
-            <div class="testimonal-grids">
-                <div class="col-md-4 testimonal-grid">
-                    <div class="testi-info">
-                        <p>"..Mauris congue, dolor at vehicula scelerisque, enim odio vehicula turpis, vitae luctus
-                            dolor nisi eget est. Aliquam maximus felis eget varius mattis. Quisque tristique nibh
-                            imperdiet dignissim molestie."</p>
-                        <h4>Mark Johnson</h4>
-                        <a href="mailto:example@gmail.com">http://www.example.com</a>
-                    </div>
-                </div>
-                <div class="col-md-4 testimonal-grid">
-                    <div class="testi-info">
-                        <p>"..Mauris congue, dolor at vehicula scelerisque, enim odio vehicula turpis, vitae luctus
-                            dolor nisi eget est. Aliquam maximus felis eget varius mattis. Quisque tristique nibh
-                            imperdiet dignissim molestie."</p>
-                        <h4>Williams Deo</h4>
-                        <a href="mailto:example@gmail.com">http://www.example.com</a>
-                    </div>
-                </div>
-                <div class="col-md-4 testimonal-grid">
-                    <div class="testi-info">
-                        <p>"..Mauris congue, dolor at vehicula scelerisque, enim odio vehicula turpis, vitae luctus
-                            dolor nisi eget est. Aliquam maximus felis eget varius mattis. Quisque tristique nibh
-                            imperdiet dignissim molestie."</p>
-                        <h4>Mark Johnson</h4>
-                        <a href="mailto:example@gmail.com">http://www.example.com</a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="team">
-            <h3>Our Team</h3>
-            <div class="grid-4">
-                <div class="team-grid">
-                    <img src="images/abt1.jpg" alt="">
-                    <h4>Phasellus scipitilifen lus.</h4>
-                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla
-                        estero libero. </p>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="team-grid">
-                    <img src="images/abt2.jpg" alt="">
-                    <h4>Phasellus scipitilifen lus.</h4>
-                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla
-                        estero libero. </p>
-                </div>
-            </div>
-            <div class="grid-4 span66">
-                <div class="team-grid">
-                    <img src="images/abt3.jpg" alt="">
-                    <h4>Phasellus scipitilifen lus.</h4>
-                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla
-                        estero libero. </p>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="team-grid">
-                    <img src="images/abt4.jpg" alt="">
-                    <h4>Phasellus scipitilifen lus.</h4>
-                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla
-                        estero libero. </p>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!-- /About -->
-<!--footer-->
-<div class="footer">
-    <!-- container -->
-    <div class="container">
-        <div class="col-md-6 footer-left">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="typography.html">Shortcodes</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <form>
-                <input type="text" placeholder="Email" required="">
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
-        <div class="col-md-3 footer-middle">
-            <h3>Address</h3>
-            <div class="address">
-                <p>756 gt globel Place,
-                    <span>CD-Road,M 07 435.</span>
+                <h3>Endangered Animals Monitoring System</h3>
+                <p>An endangered species is a group of organisms which is at risk of becoming extinct for one or more of
+                    these three reasons: destruction or interruption of environment, in other words habitat loss, an
+                    alteration in the ecological balance resulting in an increase in predators or too few remaining
+                    members for sustainable breeding. In each of the above scenarios, an immediate change in the vital
+                    stats of the animal can be expected.
+                    This projects aims to help keep a check on the depleting numbers of the animals by monitoring their
+                    health and well-being in real time. By keeping a tab on the vital stats of the animals the concerned
+                    officials can determine if any animals need special attention. Corrective measures taken at the
+                    correct time will help in monitoring the animals and bringing down the rate at which these animals
+                    are lost by a considerable amount.
                 </p>
             </div>
-            <div class="phone">
-                <p>+1(100)2345-6789</p>
-            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="col-md-3 footer-right">
-            <h3>Book Info</h3>
-            <p>Proin eget ipsum ultrices, aliquet velit eget, tempus tortor. Phasellus non velit sit amet diam faucibus
-                molestie tincidunt efficitur nisi.</p>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <!-- //container -->
-</div>
+
+
 <!--/footer-->
 <!--copy-rights-->
-<div class="copyright">
-    <!-- container -->
-    <div class="container">
-        <div class="copyright-left">
-            <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank"
-                                                                         href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
-            </p>
-        </div>
-        <div class="copyright-right">
-            <ul>
-                <li><a href="#" class="twitter"> </a></li>
-                <li><a href="#" class="twitter facebook"> </a></li>
-                <li><a href="#" class="twitter chrome"> </a></li>
-                <li><a href="#" class="twitter pinterest"> </a></li>
-                <li><a href="#" class="twitter linkedin"> </a></li>
-                <li><a href="#" class="twitter dribbble"> </a></li>
-            </ul>
-        </div>
-        <div class="clearfix"></div>
 
-    </div>
-    <!-- //container -->
-    <!---->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-             var defaults = {
-             containerID: 'toTop', // fading element id
-             containerHoverID: 'toTopHover', // fading element hover id
-             scrollSpeed: 1200,
-             easingType: 'linear'
-             };
-             */
-            $().UItoTop({easingType: 'easeOutQuart'});
-        });
-    </script>
-    <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-    <!---->
-</div>
 <!--/copy-rights-->
 </body>
 </html>

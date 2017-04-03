@@ -23,18 +23,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        //$mysqli = new mysqli("localhost:8889", "root", "root", "angularcode_task");
-        //echo "<script>alert('DB connected');</script>";
-
-        /*
-        $link = mysql_connect("127.0.0.1:8889","root","root");
-        if(!$link){
-            echo "<script>alert('DB unconnected');</script>";
-        }
-        mysql_select_db("angularcode_task");
-        mysql_query("set names 'gbk'");*/
-        //echo "<script>alert('DB connected'); history.go(-1);</script>";
-        $sql = "select id,username,job from p_user where username = '$user' and password = '$psw'";
+        $sql = "select id,username,job,firstname,lastname from p_user where username = '$user' and password = '$psw'";
         $result = $mysqli->query($sql);
         $num = mysqli_num_rows($result);
         //$row = $result->fetch_assoc();
@@ -46,14 +35,16 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
             $row = mysqli_fetch_array($result);
             $_SESSION['id'] = $row[0];
             $_SESSION['username'] = $row[1];
-            $_SESSION['job'] = $row[2];
+//            $_SESSION['job'] = $row[2];
+            $_SESSION['firstname'] = $row[3];
+            $_SESSION['lastname'] = $row[4];
 
 
 //
-            if ($row[2] == "admin") {
-                $_SESSION['web'] = 'gallery.php';
+            if ($row[2] == "mng") {
+                $_SESSION['web'] = 'mng.php';
             } elseif ($row[2] == "tech") {
-                $_SESSION['web'] = 'techstaff.php';
+                $_SESSION['web'] = 'tech.php';
 
             }
             header('location:../' . $_SESSION['web']);

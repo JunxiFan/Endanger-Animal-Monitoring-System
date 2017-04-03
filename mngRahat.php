@@ -8,7 +8,7 @@
 <html>
 <head>
 
-    <title>Technical Staff</title>
+    <title>Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     ?>
                     <!--                    <li><span class=\"glyphicon glyphicon-user\"></span> {$_SESSION['username']}</li>-->
                     <div class="login-pop">
-                        <div id="loginpop"><a href="logout.php"><span>Logout</span></a></div>
+                        <div id="loginpop"><a href="deals/logout.php"><span>Logout</span></a></div>
                     </div>
                 </ul>
 
@@ -91,50 +91,68 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <div class="banner banner5">
     <div class="container">
-        <h2>Technical Staff Page</h2>
+        <h2>Manager Page</h2>
     </div>
 </div>
-<div class="col-sm-3 col-lg-3">
-    <div class="sidebar-nav">
-        <div>
-            <br><br>
-            <ul class="nav nav-pills nav-stacked main-menu text-center">
-                <li><a href="test.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Install</span></a>
-                </li>
-                <li><a href="install.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Recycle</span></a>
-                </li>
 
+
+<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        <li><a href="#addAnimal">Add an Animal</a></li>
+        <li><a href="#deleteAnimal">Delete an Animal</a></li>
+        <li><a href="#volDonations">Check Volunteer Donations</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span
+                        class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#section41">Section 4-1</a></li>
+                <li><a href="#section42">Section 4-2</a></li>
             </ul>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>
 
-<div id="content" class="main col-lg-8 col-sm-8">
-    <!-- content starts -->
-    <table>
-        <!--<tr><td class="header"><div><h1>Header</h1></div></td></tr>-->
-        <tr>
-            <td class="content">
-                <iframe name="readmore" width="1000" height="900" frameborder="2" scrolling="yes"
-                        src="typography.php" id="accountframe"></iframe>
-            </td>
-        </tr>
-    </table>
+<div id="addAnimal" class="container-fluid">
+    <h3 align="center">Add an animal</h3>
+    <form action="/example.php" align="center">
 
+        Animal ID: <br> <input type="text" name="animalID"><br><br>
+        Name: <br> <input type="text" name="name"><br><br>
+        Population: <br> <input type="text" name="population"><br><br>
+        Minimum Weight: <br> <input type="text" name="minWeight"><br><br>
+        Maximum Weight: <br> <input type="text" name="maxWeight"><br><br>
+        Minimum Length: <br> <input type="text" name="minLength"><br><br>
+        Maximum Length: <br> <input type="text" name="maxLength"><br><br>
+        Risk: <br> <input type="text" name="risk"><br><br>
+        Minimum Temperature: <br> <input type="text" name="minTemp"><br><br>
+        Maximum Temperature: <br> <input type="text" name="maxTemp"><br><br>
+        Minimum Respiration: <br> <input type="text" name="minResp"><br><br>
+        Maximum Respiration: <br> <input type="text" name="maxResp"><br><br>
+        Minimum Heartbeat: <br> <input type="text" name="minHeart"><br><br>
+        Maximum Heartbeat: <br> <input type="text" name="maxHeart"><br><br>
+        Minimum Temperature: <br> <input type="text" name="minTemp"><br><br>
+        Maximum Temperature: <br> <input type="text" name="maxTemp"><br><br>
+        Minimum Blood Pressure: <br> <input type="text" name="minBP"><br><br>
+        Maximum Blood Pressure: <br> <input type="text" name="maxBP"><br><br>
+        Running Speed: <br> <input type="text" name="runningSpeed"><br><br>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
-<!--<script>-->
-<!--    function display() {-->
-<!--        document.getElementById("accountframe").style.display = "block";-->
-<!--    }-->
-<!---->
-<!--    $(document).ready(function () {-->
-<!--        var b = $(window).height(); //gets the window's height, change the selector if you are looking for height relative to some other element-->
-<!--        $("#content").css("height", b);-->
-<!--    });-->
-<!--</script>-->
+
+<div id="deleteAnimal" class="container-fluid">
+    <h3 align="center">Delete an animal</h3>
+    <form action="/example.php" align="center">
+        Animal ID: <br> <input type="text" name="animalID"><br><br>
+        Name: <br> <input type="text" name="name"><br><br>
+        <input type="submit" value="Submit">
+</div>
+
+<div id="volDonations" class="container-fluid">
+    <h3 align="center">Volunteer Donations</h3>
+    <form action="/example.php" align="center">
+        <input type="submit" value="Click to see Donations" align="center">
+    </form>
+</div>
 
 </body>
 </html>
