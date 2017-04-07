@@ -9,8 +9,8 @@
 if (isset($_SESSION['id'])) {
     unset($_SESSION['id']);
     unset($_SESSION['username']);
-    unset($_SESSION['carts']);
-    unset($_SESSION['filepath']);
+    unset($_SESSION['firstname']);
+    unset($_SESSION['lastname']);
 }
 if (isset($_SESSION['id'])) {
     echo $_SESSION['id'];

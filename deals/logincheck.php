@@ -16,14 +16,14 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
         $DB_PORT = '3306';
         $DB_USER = 'root';
         $DB_PASS = '';
-        $DB_NAME = 'endanger_animal';
+        $DB_NAME = 'aqua';
         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
         // Check connection
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        $sql = "select id,username,job,firstname,lastname from p_user where username = '$user' and password = '$psw'";
+        $sql = "select Id,Username,job,Firstname,Lastname from account where username = '$user' and password = '$psw'";
         $result = $mysqli->query($sql);
         $num = mysqli_num_rows($result);
         //$row = $result->fetch_assoc();
@@ -45,7 +45,8 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
                 $_SESSION['web'] = 'mng.php';
             } elseif ($row[2] == "tech") {
                 $_SESSION['web'] = 'tech.php';
-
+            }elseif ($row[2] == "analyst") {
+                $_SESSION['web'] = 'analyst.php';
             }
             header('location:../' . $_SESSION['web']);
             exit;

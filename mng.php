@@ -1,14 +1,14 @@
-/**
-* Created by IntelliJ IDEA.
-* User: fjx19
-* Date: 2017/4/2
-* Time: 18:25
-*/
+<!--/**-->
+<!--* Created by IntelliJ IDEA.-->
+<!--* User: fjx19-->
+<!--* Date: 2017/4/2-->
+<!--* Time: 18:25-->
+<!--*/-->
 <!doctype html>
 <html>
 <head>
 
-    <title>Technical Staff</title>
+    <title>Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -100,11 +100,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div>
             <br><br>
             <ul class="nav nav-pills nav-stacked main-menu text-center">
-                <li><a href="mngadd.php" target="readmore" onclick="display()"><i
+                <li><a href="mngaddanimal.php" target="readmore" onclick="display()"><i
                                 class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Animals</span></a>
                 </li>
-                <li><a href="install.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Manage staff</span></a>
+                <li><a href="mngemp.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Manage Employees</span></a>
+                </li>
+                <li><a href="mngaddemp.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Employees</span></a>
                 </li>
 
             </ul>
@@ -127,3 +130,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 </body>
 </html>
+

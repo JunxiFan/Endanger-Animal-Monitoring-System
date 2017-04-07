@@ -45,10 +45,10 @@ $DB_HOST = 'localhost';
 $DB_PORT = '3306';
 $DB_USER = 'root';
 $DB_PASS = '';
-$DB_NAME = 'endanger_animal';
+$DB_NAME = 'aqua';
 $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-$sql_install = "select AnimalTypeID, name from animal";//将选中的动物信息插入collar表中
+$sql_install = "select TypeID, name from standard";//将选中的动物信息插入collar表中
 $result = $mysqli->query($sql_install);
 $count_rows = mysqli_num_rows($result);
 ?>
@@ -72,8 +72,9 @@ $count_rows = mysqli_num_rows($result);
                     }
                     ?>
                 </select>
-                <br>
+                <br><br>
                 <!--                Animal Type: <br> <input type="text" name="animaltype"><br><br>-->
+                Age: <br> <input type="text" name="age"><br><br>
                 Name: <br> <input type="text" name="name"><br><br>
                 <input type="submit" name="submit" id="login" value="Submit">
             </form>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>tech staff install</title>
+    <title>Manage Employee</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -44,20 +44,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <section id="tables">
             <div class="bs-docs-example">
-                <h3 style="text-align:center">Install Equipment</h3>
+                <h3 style="text-align:center">Manage Employees</h3>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Animal's ID</th>
-                        <th>Type</th>
-                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Position</th>
+                        <th>Username</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         <th>Operation</th>
                         <!--                    <th>Order Items</th>-->
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    session_start();
 
 
                     $DB_HOST = 'localhost';
@@ -67,24 +68,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $DB_NAME = 'aqua';
                     $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                    $sql = "select animal.AnimalID, standard.Name, animal.Name 
-                            from animal join standard on animal.TypeID = standard.TypeID and animal.status ='0';";
+                    $sql = "select ID,Username,Job,Firstname,Lastname from account; ";
                     $result = $mysqli->query($sql);
                     if (!$result) {
                         die('Could not get data: ' . mysql_error());
                     }
-                    while ($animalInfo = mysqli_fetch_array($result)) {
-                        $animalID = $animalInfo[0];
-                        $type = $animalInfo[1];
-                        $name = $animalInfo[2];
+                    while ($empInfo = mysqli_fetch_array($result)) {
+                        $ID = $empInfo[0];
+                        $position = $empInfo[2];
+                        $username = $empInfo[1];
+                        $firstname = $empInfo[3];
+                        $lastname = $empInfo[4];
                         //$sql = "select type,imgpath from product where gid = $pid";
 //
 //                        <td><span class="badge">42</span></td>
                         echo "<tr>";
-                        echo "<td><span class='badge'>$animalID</span></td>";
-                        echo "<td>$type</td>";
-                        echo "<td>$name</td>";
-                        echo "<td><a href='../deals/techinstalldeal.php?animalID=" . $animalID . "'>install</a></td>";
+                        echo "<td><span class='badge'>$ID</span></td>";
+                        echo "<td>$position</td>";
+                        echo "<td>$username</td>";
+                        echo "<td>$firstname</td>";
+                        echo "<td>$lastname</td>";
+
+                        echo "<td><a href='../deals/mngempupdate.php?empID=" . $ID . "'>Update</a></td>";
+                        echo "<td><a href='../deals/mngempdel.php?empID=" . $ID . "'>Delete</a></td>";
 
 //                        echo "&nbsp<a href='test2-1.php?id=" . $re[0] . "'>删除</a><br />";
 
@@ -92,6 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 //                    echo "<td><img src=$imgpath alt=\"item1\" height=\"40px\" width=\"60px\"><br> $pname $ptype</td>";
                         echo "</tr>";
                     }
+
                     ?>
                     <!--						<tr><td><img src="Images/chineseknot/chineseknot.png" alt="item4" height="50px" width="80px"><br> Chineseknot 2</td></tr>	-->
                     </tbody>

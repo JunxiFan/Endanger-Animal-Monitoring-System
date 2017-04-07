@@ -6574,4 +6574,8 @@ button.close {
     display: none !important;
   }
 }
+.wrap {
+  margin: 0 auto;
+  width: 960px;
+}
 /*# sourceMappingURL=bootstrap.css.map */

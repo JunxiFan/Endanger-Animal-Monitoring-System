@@ -10,6 +10,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Submit") {
 
     $animaltype = $_POST["animaltype"];
     $name = $_POST["name"];
+    $age = $_POST["age"];
     if ( $animaltype == "" || $name == "") {
         echo "<script>alert('Please Insert First！'); history.go(-1);</script>";
     } else {
@@ -18,7 +19,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Submit") {
         $DB_PORT = '3306';
         $DB_USER = 'root';
         $DB_PASS = '';
-        $DB_NAME = 'endanger_animal';
+        $DB_NAME = 'aqua';
         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
         // Check connection
         if (mysqli_connect_errno()) {
@@ -36,7 +37,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Submit") {
 //
 //        } else    //不存在当前注册用户名称
 //        {
-        $sql_insert = "insert into monitoringanimal (AnimalTypeID, name, status) values('$animaltype','$name','0')";
+        $sql_insert = "insert into animal (TypeID, Status, Age, Name) values('$animaltype','0', '$age','$name')";
         //$res_insert = mysql_query($sql_insert);
         $res_insert = $mysqli->query($sql_insert);
         //$num_insert = mysql_num_rows($res_insert);
