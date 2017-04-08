@@ -16,7 +16,7 @@ $DB_NAME = 'aqua';
 $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
 $time = date("Y-m-d H:i:s");
-$sql_install = "insert into collar (StaffID,ActicateDate,AnimalID) values('$_SESSION[id]','$time', '$s')";//将选中的动物信息插入collar表中
+$sql_install = "insert into collar (StaffID,ActivateDate,AnimalID) values('$_SESSION[id]','$time', '$s')";//将选中的动物信息插入collar表中
 $result1 = $mysqli->query($sql_install);
 
 $sql_delete = "update animal set status='1' where AnimalID = '$s'";//将已安装完的动物信息从表中删除

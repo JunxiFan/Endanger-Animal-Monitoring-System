@@ -1,14 +1,7 @@
-<!--/**-->
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: fjx19-->
-<!-- * Date: 2017/3/29-->
-<!-- * Time: 12:02-->
-<!-- */-->
 <!doctype html>
 <html>
 <head>
-
-    <title>Technical Staff</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -33,7 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           rel='stylesheet' type='text/css'>
     <!--/fonts-->
     <!--hover-girds-->
-    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+<!--    <link rel="stylesheet" type="text/css" href="css/default.css"/>-->
     <link rel="stylesheet" type="text/css" href="css/component.css"/>
     <script src="js/modernizr.custom.js"></script>
     <!--/hover-grids-->
@@ -50,6 +43,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!--/script-->
 </head>
+<body>
+<!--header-->
 <div class="header" id="home">
     <nav class="navbar navbar-default">
         <div class="container">
@@ -67,74 +62,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
-
-                    <?php
-                    session_start();
-                    echo "<li><a href=\"#\"><span class=\"glyphicon glyphicon-user\">Welcome, {$_SESSION['firstname']} {$_SESSION['lastname']}!</span></a></li>";
-                    ?>
-                    <!--                    <li><span class=\"glyphicon glyphicon-user\"></span> {$_SESSION['username']}</li>-->
-                    <div class="login-pop">
-                        <div id="loginpop"><a href="deals/logout.php"><span>Logout</span></a></div>
-                    </div>
+                    <li><a href="index.php"><span data-hover="Home">Home</span></a></li>
+                    <li><a href="donor.php"><span data-hover="Donor">Donor</span></a></li>
+                    <li><a href="volunteer.php"><span data-hover="Volunteer">Volunteer</span></a></li>
+                    <li><a href="about.php"><span data-hover="About">About</span></a></li>
+                    <li><a href="contact.php"><span data-hover="Contact">Contact</span></a></li>
                 </ul>
-
                 <div class="clearfix"></div>
             </div><!-- /.navbar-collapse -->
             <!-- /.container-fluid -->
-            <!--            echo "<li><a href=\"../views/logout.php\"><span class=\"glyphicon glyphicon-log-in\"></span> Log out</a></li>";-->
-            <!--            <a href="gallery.php" id="loginButton">dfdf</a>-->
+            <div class="login-pop">
+                <div id="loginpop"><a href="#" id="loginButton"><span>Login</span></a>
+                    <div id="loginBox">
+                        <form role="form" id="loginForm" action="deals/logincheck.php" method="post">
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="email">Username</label>
+                                    <input type="text" id="username" name="username">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password">
+                                </fieldset>
+                                <input type="submit" name="submit" id="login" value="Log in">
+                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                            </fieldset>
+                            <span><a href="#">Forgot your password?</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <script src="js/menu_jquery.js"></script>
         </div>
     </nav>
     <!--/script-->
     <div class="clearfix"></div>
 </div>
-<div class="banner banner5">
+<!-- Top Navigation -->
+
+
+
+<div class="typrography">
     <div class="container">
-        <h2>Technical Staff Page</h2>
-    </div>
-</div>
-<div class="col-sm-3 col-lg-3">
-    <div class="sidebar-nav">
-        <div>
-            <br><br>
-            <ul class="nav nav-pills nav-stacked main-menu text-center">
-                <li><a href="techinstall.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Install</span></a>
-                </li>
-                <li><a href="techview.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;View Collars</span></a>
-                </li>
+        <section id="tables">
+            <!--            <div class="bs-docs-example">-->
+            <h3 style="text-align:center">Thank you for your help!</h3>
+            <br>
 
-            </ul>
-        </div>
-    </div>
-</div>
+            <form role="form" align="center" name="register" id="register" action="deals/donordeal.php"
+                  method="POST">
 
-<div id="content" class="main col-lg-8 col-sm-8">
-    <!-- content starts -->
-    <table>
-        <!--<tr><td class="header"><div><h1>Header</h1></div></td></tr>-->
-        <tr>
-            <td class="content">
-                <iframe name="readmore" width="1000" height="600" frameborder="2" scrolling="yes"
-                        src="../deals/whitepage.php" id="accountframe"></iframe>
-            </td>
-        </tr>
-    </table>
+                Name: <br> <input type="text" name="name"><br><br>
+                Address: <br> <input type="text" name="address"><br><br>
 
-</div>
-
-<!--<script>-->
-<!--    function display() {-->
-<!--        document.getElementById("accountframe").style.display = "block";-->
-<!--    }-->
+<!--                Position:<br>-->
+<!--                <select style="text-align:center" id="position" name="position">-->
 <!---->
-<!--    $(document).ready(function () {-->
-<!--        var b = $(window).height(); //gets the window's height, change the selector if you are looking for height relative to some other element-->
-<!--        $("#content").css("height", b);-->
-<!--    });-->
-<!--</script>-->
+<!--                    <option value="tech">Technical Staff</option>-->
+<!--                    <option value="analyst">Analyst</option>-->
+<!--                    <option value="vet">Vet</option>-->
+<!--                </select>-->
+
+<!--                <br><br>-->
+                Phone: <br> <input type="text" name="phone"><br><br>
+<!--                Last Name: <br> <input type="text" name="lastname"><br><br>-->
+
+                <input type="submit" name="submit" id="login" value="I want to donate!">
+            </form>
+
+
+        </section>
+    </div>
+</div>
 
 </body>
 </html>

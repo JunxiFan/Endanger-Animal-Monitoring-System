@@ -47,6 +47,8 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Log in") {
                 $_SESSION['web'] = 'tech.php';
             }elseif ($row[2] == "analyst") {
                 $_SESSION['web'] = 'analyst.php';
+            }elseif ($row[2] == "vet") {
+                $_SESSION['web'] = 'vet.php';
             }
             header('location:../' . $_SESSION['web']);
             exit;

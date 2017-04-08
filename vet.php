@@ -1,14 +1,14 @@
 <!--/**-->
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: fjx19-->
-<!-- * Date: 2017/3/29-->
-<!-- * Time: 12:02-->
-<!-- */-->
+<!--* Created by IntelliJ IDEA.-->
+<!--* User: fjx19-->
+<!--* Date: 2017/4/2-->
+<!--* Time: 18:25-->
+<!--*/-->
 <!doctype html>
 <html>
 <head>
 
-    <title>Technical Staff</title>
+    <title>Vet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -90,21 +90,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="clearfix"></div>
 </div>
 <div class="banner banner5">
-    <div class="container">
-        <h2>Technical Staff Page</h2>
+    <div class="container" align="center">
+        <h2>Vet Page</h2>
     </div>
 </div>
+
 <div class="col-sm-3 col-lg-3">
     <div class="sidebar-nav">
         <div>
             <br><br>
             <ul class="nav nav-pills nav-stacked main-menu text-center">
-                <li><a href="techinstall.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Install</span></a>
+                <li><a href="vetrescue.php" target="readmore" onclick="display()"><i
+                            class="glyphicon glyphicon-edit"></i><span>&nbsp;Rescure</span></a>
                 </li>
-                <li><a href="techview.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;View Collars</span></a>
+                <li><a href="vetviewsensor.php" target="readmore" onclick="display()"><i
+                            class="glyphicon glyphicon-edit"></i><span>&nbsp;Search Sensor Data</span></a>
                 </li>
+
+                <li><a href="searchhistory.php" target="readmore" onclick="display()"><i
+                            class="glyphicon glyphicon-edit"></i><span>&nbsp;Treatment History</span></a>
+                </li>
+                <!--                <li><a href="mngaddemp.php" target="readmore" onclick="display()"><i-->
+                <!--                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Employees</span></a>-->
+                <!--                </li>-->
 
             </ul>
         </div>
@@ -124,17 +132,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </table>
 
 </div>
-
-<!--<script>-->
-<!--    function display() {-->
-<!--        document.getElementById("accountframe").style.display = "block";-->
-<!--    }-->
-<!---->
-<!--    $(document).ready(function () {-->
-<!--        var b = $(window).height(); //gets the window's height, change the selector if you are looking for height relative to some other element-->
-<!--        $("#content").css("height", b);-->
-<!--    });-->
-<!--</script>-->
-
 </body>
 </html>
+

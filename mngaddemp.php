@@ -49,9 +49,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!--            <div class="bs-docs-example">-->
             <h3 style="text-align:center">Add an Employee</h3>
             <br>
-            <?php
-            ?>
-
 
             <form role="form" align="center" name="register" id="register" action="deals/mngaddempdeal.php"
                   method="POST">
