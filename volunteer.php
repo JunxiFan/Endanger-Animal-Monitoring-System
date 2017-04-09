@@ -112,24 +112,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <form role="form" align="center" name="register" id="register" action="deals/donordeal.php"
                   method="POST">
 
-                First Name: <br> <input type="text" name="name"><br><br>
-                Last Name: <br> <input type="text" name="address"><br><br>
-
-                <!--                Position:<br>-->
-                <!--                <select style="text-align:center" id="position" name="position">-->
-                <!---->
-                <!--                    <option value="tech">Technical Staff</option>-->
-                <!--                    <option value="analyst">Analyst</option>-->
-                <!--                    <option value="vet">Vet</option>-->
-                <!--                </select>-->
-
-                <!--                <br><br>-->
-                Address: <br> <input type="text" name="phone"><br><br>
+                First Name: <br> <input type="text" name="firstname"><br><br>
+                Last Name: <br> <input type="text" name="lastname"><br><br>
+                Address: <br> <input type="text" name="address"><br><br>
                 Phone Number: <br> <input type="text" name="phone"><br><br>
-                Address: <br> <input type="text" name="phone"><br><br>
+                Resume: <br> <input type="text" name="resume"><br><br>
+                E-mail: <br> <input type="text" name="email"><br><br>
                 <!--                Last Name: <br> <input type="text" name="lastname"><br><br>-->
 
-                <input type="submit" name="submit" id="login" value="I want to donate!">
+                <input type="submit" name="submit" id="login" value="Submit">
             </form>
 
 

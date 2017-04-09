@@ -103,11 +103,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="vetrescue.php" target="readmore" onclick="display()"><i
                             class="glyphicon glyphicon-edit"></i><span>&nbsp;Rescure</span></a>
                 </li>
-                <li><a href="vetviewsensor.php" target="readmore" onclick="display()"><i
+                <li><a href="vetsearch.php" target="readmore" onclick="display()"><i
                             class="glyphicon glyphicon-edit"></i><span>&nbsp;Search Sensor Data</span></a>
                 </li>
 
-                <li><a href="searchhistory.php" target="readmore" onclick="display()"><i
+                <li><a href="vethistory.php" target="readmore" onclick="display()"><i
                             class="glyphicon glyphicon-edit"></i><span>&nbsp;Treatment History</span></a>
                 </li>
                 <!--                <li><a href="mngaddemp.php" target="readmore" onclick="display()"><i-->
