@@ -109,6 +109,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="mngaddemp.php" target="readmore" onclick="display()"><i
                                 class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Employees</span></a>
                 </li>
+                <li><a href="mngviewvol.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;View Applications</span></a>
+                </li>
 
             </ul>
         </div>

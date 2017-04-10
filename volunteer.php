@@ -109,7 +109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h3 style="text-align:center">Thank you for your help!</h3>
             <br>
 
-            <form role="form" align="center" name="register" id="register" action="deals/donordeal.php"
+            <form role="form" align="center" name="register" id="register" action="deals/volunteerdeal.php"
                   method="POST">
 
                 First Name: <br> <input type="text" name="firstname"><br><br>

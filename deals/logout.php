@@ -11,6 +11,7 @@ if (isset($_SESSION['id'])) {
     unset($_SESSION['username']);
     unset($_SESSION['firstname']);
     unset($_SESSION['lastname']);
+    unset($_SESSION['animalID']);
 }
 if (isset($_SESSION['id'])) {
     echo $_SESSION['id'];

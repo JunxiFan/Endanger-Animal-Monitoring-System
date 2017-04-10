@@ -101,11 +101,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <br><br>
             <ul class="nav nav-pills nav-stacked main-menu text-center">
                 <li><a href="anasearch.php" target="readmore" onclick="display()"><i
-                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Search</span></a>
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Search Collar Data</span></a>
                 </li>
-<!--                <li><a href="mngemp.php" target="readmore" onclick="display()"><i-->
-<!--                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Manage Employees</span></a>-->
-<!--                </li>-->
+                <li><a href="vetsearch.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Search Sensor Datas</span></a>
+                </li>
+                <li><a href="analystviewdonor.php" target="readmore" onclick="display()"><i
+                                class="glyphicon glyphicon-edit"></i><span>&nbsp;View Donation</span></a>
+                </li>
 <!--                <li><a href="mngaddemp.php" target="readmore" onclick="display()"><i-->
 <!--                                class="glyphicon glyphicon-edit"></i><span>&nbsp;Add Employees</span></a>-->
 <!--                </li>-->

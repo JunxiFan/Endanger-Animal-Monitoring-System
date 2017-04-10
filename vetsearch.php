@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="bs-docs-example">
                 <h3 style="text-align:center">Search</h3>
 
-                <form role="form" align="center" name="updateEmp" id="updateEmp" action="anasearch.php"
+                <form role="form" align="center" name="updateEmp" id="updateEmp" action="vetsearch.php"
                       method="post">
 
                     Animal ID: <br> <input type="text" name="animalID"><br>
@@ -64,9 +64,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>Sensor ID</th>
                         <th>Record Date</th>
                         <th>Blood Pressure</th>
-                        <th>Temperature</th>
-                        <th>Location</th>
-                        <th>Rescue Result</th>
+                        <th>Bioelectricity</th>
+                        <th>PH</th>
+
                         <!--                    <th>Order Items</th>-->
                     </tr>
                     </thead>
@@ -81,10 +81,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                         $sql = "select sensordata.SensorDataID, animal.AnimalID, standard.Name, sensor.sensorID, 
-                          sensordata.RecordDate, sensordata.Bloodpressure, sensordata.Temprature, sickanimal.Location 
-                          from ((animal join standard on animal.TypeID = standard.TypeID)
+                          sensordata.RecordDate, sensordata.Bloodpressure, sensordata.Bioelectricity, sensordata.PH
+                          from (((animal join standard on animal.TypeID = standard.TypeID)
                           join sensor on animal.AnimalID = sensor.AnimalID)
-                          join sensordata on sensor.SensorID = sensordata.SensorID
+                          join sensordata on sensor.SensorID = sensordata.SensorID)
                           where animal.AnimalID = $_POST[animalID];";
                         $result = $mysqli->query($sql);
                         if (!$result) {
@@ -97,7 +97,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             $sensorID = $animalInfo[3];
                             $rectime = $animalInfo[4];
                             $bloodpressure = $animalInfo[5];
-                            $temp = $animalInfo[6];
+                            $bioelec = $animalInfo[6];
+                            $ph = $animalInfo[7];
 //                        $location = $animalInfo[7];
                             if ($dataID) {
                                 echo "<tr>";
@@ -107,7 +108,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 echo "<td>$sensorID</td>";
                                 echo "<td>$rectime</td>";
                                 echo "<td>$bloodpressure</td>";
-                                echo "<td>$temp</td>";
+                                echo "<td>$bioelec</td>";
+                                echo "<td>$ph</td>";
                             } else {
                                 echo "<script>alert('Search Failed!'); history.go(-1);</script>";
                             }

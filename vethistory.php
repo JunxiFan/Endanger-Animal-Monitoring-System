@@ -1,9 +1,7 @@
 <!doctype html>
 <html>
 <head>
-
-
-    <title>Search</title>
+    <title>tech staff install</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -46,9 +44,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <section id="tables">
             <div class="bs-docs-example">
-                <h3 style="text-align:center">Manage Employees</h3>
+                <h3 style="text-align:center">Search</h3>
 
-                <form role="form" align="center" name="updateEmp" id="updateEmp" action="anasearch.php"
+                <form role="form" align="center" name="updateEmp" id="updateEmp" action="vethistory.php"
                       method="post">
 
                     Animal ID: <br> <input type="text" name="animalID"><br>
@@ -56,30 +54,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input type="submit" name="submit" id="login" value="Search">
 
                 </form>
+
                 <table class="table table-striped">
                     <thead>
                     <tr>
                         <th>Data ID</th>
+                        <th>Record Date</th>
                         <th>Animal ID</th>
-                        <th>Type</th>
-                        <th>Collar ID</th>
-                        <th>Record Time</th>
-                        <th>Heart Beats</th>
-                        <th>Respire</th>
-                        <th>Temperature</th>
-                        <th>Location</th>
+                        <th>Details</th>
+
 
                         <!--                    <th>Order Items</th>-->
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-
-                    ?>
-
-                    <?php
                     if (isset($_POST["submit"]) && $_POST["submit"] == "Search") {
-
                         $DB_HOST = 'localhost';
                         $DB_PORT = '3306';
                         $DB_USER = 'root';
@@ -87,12 +77,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         $DB_NAME = 'aqua';
                         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                        $sql = "select collardata.CollarDataID, animal.AnimalID, standard.Name, collar.CollarID, 
-                          collardata.RecordDate, collardata.HeartBeat, collardata.Respire, collardata.Temperature, collardata.Location 
-                          from ((animal join standard on animal.TypeID = standard.TypeID)
-                          join collar on animal.AnimalID = collar.AnimalID)
-                          join collardata on collar.CollarID = collardata.CollarID
-                          where animal.AnimalID = $_POST[animalID]; ";
+                        $sql = "select TreatmentID, AnimalID, TreatmentRecord, TreatmentDate
+                          from treatment where AnimalID = $_POST[animalID];";
                         $result = $mysqli->query($sql);
                         if (!$result) {
                             die('Could not get data: ' . mysql_error());
@@ -100,45 +86,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         while ($animalInfo = mysqli_fetch_array($result)) {
                             $dataID = $animalInfo[0];
                             $animalID = $animalInfo[1];
-                            $typename = $animalInfo[2];
-                            $collarID = $animalInfo[3];
-                            $rectime = $animalInfo[4];
-                            $beat = $animalInfo[5];
-                            $respire = $animalInfo[6];
-                            $temp = $animalInfo[7];
-                            $location = $animalInfo[8];
+                            $rec = $animalInfo[2];
+                            $rectime = $animalInfo[3];
 
-                            if($dataID) {
+                            if ($dataID) {
                                 echo "<tr>";
                                 echo "<td><span class='badge'>$dataID</span></td>";
-                                echo "<td>$animalID</td>";
-                                echo "<td>$typename</td>";
-                                echo "<td>$collarID</td>";
                                 echo "<td>$rectime</td>";
-                                echo "<td>$beat</td>";
-                                echo "<td>$respire</td>";
-                                echo "<td>$temp</td>";
-                                echo "<td>$location</td>";
-                            }else{
+                                echo "<td>$animalID</td>";
+                                echo "<td>$rec</td>";
+
+                            } else {
                                 echo "<script>alert('Search Failed!'); history.go(-1);</script>";
                             }
 
-//        echo "<td><a href='../deals/mngempupdate.php?empID=" . $ID . "'>Update</a></td>";
-//        echo "<td><a href='../deals/mngempdel.php?empID=" . $ID . "'>Delete</a></td>";
+//                        echo "<tr>";
+//                        echo "<td><span class='badge'>$sickID</span></td>";
+//                        echo "<td>$animalID</td>";
+//                        echo "<td>$location</td>";
+//                        echo "<td>$status</td>";
+//                        echo "<td><a href='../deals/rescsucdeal.php?animalID=" . $animalID . "'>Succeed</a></td>";
+//                        echo "<td><a href='../deals/resfaildeal.php?animalID=" . $animalID . "'>Fail</a></td>";
 
 //                        echo "&nbsp<a href='test2-1.php?id=" . $re[0] . "'>删除</a><br />";
 
 
 //                    echo "<td><img src=$imgpath alt=\"item1\" height=\"40px\" width=\"60px\"><br> $pname $ptype</td>";
                             echo "</tr>";
-
                         }
                     }
-//                    else {
-//                        echo "<script>alert('aaa Failed!'); history.go(-1);</script>";
-//                    }
-
                     ?>
+                    <!--						<tr><td><img src="Images/chineseknot/chineseknot.png" alt="item4" height="50px" width="80px"><br> Chineseknot 2</td></tr>	-->
                     </tbody>
                 </table>
 

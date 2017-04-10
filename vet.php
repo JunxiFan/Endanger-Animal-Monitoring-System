@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div>
             <br><br>
             <ul class="nav nav-pills nav-stacked main-menu text-center">
-                <li><a href="vetrescue.php" target="readmore" onclick="display()"><i
+                <li><a href="vetviewsick.php" target="readmore" onclick="display()"><i
                             class="glyphicon glyphicon-edit"></i><span>&nbsp;Rescure</span></a>
                 </li>
                 <li><a href="vetsearch.php" target="readmore" onclick="display()"><i

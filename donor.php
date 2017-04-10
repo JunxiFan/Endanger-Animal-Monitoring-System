@@ -99,7 +99,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="clearfix"></div>
 </div>
 <!-- Top Navigation -->
+<?php
+$DB_HOST = 'localhost';
+$DB_PORT = '3306';
+$DB_USER = 'root';
+$DB_PASS = '';
+$DB_NAME = 'aqua';
+$mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
+$sql_install = "select AnimalID, Name from animal";//将选中的动物信息插入collar表中
+$result = $mysqli->query($sql_install);
+$count_rows = mysqli_num_rows($result);
+?>
 
 
 <div class="typrography">
@@ -114,17 +125,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 Name: <br> <input type="text" name="name"><br><br>
                 Address: <br> <input type="text" name="address"><br><br>
-
-<!--                Position:<br>-->
-<!--                <select style="text-align:center" id="position" name="position">-->
-<!---->
-<!--                    <option value="tech">Technical Staff</option>-->
-<!--                    <option value="analyst">Analyst</option>-->
-<!--                    <option value="vet">Vet</option>-->
-<!--                </select>-->
-
-<!--                <br><br>-->
                 Phone: <br> <input type="text" name="phone"><br><br>
+                Donate for:<br>
+                <select name="animalname">
+                    <?php
+                    if ($count_rows !== 0) {
+                        while ($list = mysqli_fetch_row($result)) {
+                            echo "<option value= " . $list[0] . ">" . $list[1] . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>";
+                        }
+                    }
+                    ?>
+                </select>
+                <br><br>
+                Donation Amount: <br> <input type="text" name="amount"><br><br>
 <!--                Last Name: <br> <input type="text" name="lastname"><br><br>-->
 
                 <input type="submit" name="submit" id="login" value="I want to donate!">

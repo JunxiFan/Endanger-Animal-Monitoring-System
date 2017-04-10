@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>tech staff view</title>
+    <title>mng view application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -44,20 +44,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <section id="tables">
             <div class="bs-docs-example">
-                <h3 style="text-align:center">Collar Information</h3>
+                <h3 style="text-align:center">View Application</h3>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Collar ID</th>
-                        <th>Staff ID</th>
-                        <th>Acticate Date</th>
-                        <th>Animal ID</th>
+                        <th>Application ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Resume</th>
+                        <th>E-mail</th>
                         <!--                    <th>Order Items</th>-->
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    
+
 
 
                     $DB_HOST = 'localhost';
@@ -67,32 +70,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $DB_NAME = 'aqua';
                     $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                    $sql = "select CollarID, StaffID, ActivateDate, AnimalID from collar;";
+                    $sql = "select * from volunteer;";
                     $result = $mysqli->query($sql);
                     if (!$result) {
                         die('Could not get data: ' . mysql_error());
                     }
-                    while ($collarInfo = mysqli_fetch_array($result)) {
-                        $collarID = $collarInfo[0];
-                        $staffID = $collarInfo[1];
-                        $acDate = $collarInfo[2];
-                        $animalID = $collarInfo[3];
+                    while ($volInfo = mysqli_fetch_array($result)) {
+                        $ID = $volInfo[0];
+                        $firstname = $volInfo[1];
+                        $lastname = $volInfo[2];
+                        $address = $volInfo[3];
+                        $phone = $volInfo[4];
+                        $resume = $volInfo[5];
+                        $email = $volInfo[6];
 
 
                         //$sql = "select type,imgpath from product where gid = $pid";
 //
 //                        <td><span class="badge">42</span></td>
                         echo "<tr>";
-                        echo "<td><span class='badge'>$collarID</span></td>";
-                        echo "<td>$staffID</td>";
-                        echo "<td>$acDate</td>";
-                        echo "<td>$animalID</td>";
-
-
-//                        echo "&nbsp<a href='test2-1.php?id=" . $re[0] . "'>删除</a><br />";
-
-
-//                    echo "<td><img src=$imgpath alt=\"item1\" height=\"40px\" width=\"60px\"><br> $pname $ptype</td>";
+                        echo "<td><span class='badge'>$ID</span></td>";
+                        echo "<td>$firstname</td>";
+                        echo "<td>$lastname</td>";
+                        echo "<td>$address</td>";
+                        echo "<td>$phone</td>";
+                        echo "<td>$resume</td>";
+                        echo "<td>$email</td>";
                         echo "</tr>";
                     }
                     ?>

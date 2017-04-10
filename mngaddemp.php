@@ -53,6 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <form role="form" align="center" name="register" id="register" action="deals/mngaddempdeal.php"
                   method="POST">
 
+                ID: <br> <input type="text" name="id"><br><br>
                 Username: <br> <input type="text" name="username"><br><br>
                 Password: <br> <input type="text" name="password"><br><br>
 

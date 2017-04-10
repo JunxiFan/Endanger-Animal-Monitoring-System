@@ -61,19 +61,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $sql = "select ID, Username,Password,Job,Firstname, Lastname from account where id = $s";
             $result = $mysqli->query($sql);
             $num = mysqli_num_rows($result);
-            if($num) {
+            if ($num) {
                 $empInfo = mysqli_fetch_array($result);  //将数据以索引方式储存在数组中
 
                 session_start();
-                $_SESSION['empID']=$empInfo[0];
+                $_SESSION['empID'] = $empInfo[0];
                 $username = $empInfo[1];
                 $psw = $empInfo[2];
                 $position = $empInfo[3];
                 $firstname = $empInfo[4];
                 $lastname = $empInfo[5];
 
-            }
-            else{
+            } else {
                 echo "<script>alert('Insert data failed');</script>";
             }
             ?>
@@ -89,7 +88,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="divinline col-offset-sm-1 col-sm-3">
                     <label for="pw">Position</label>
                     <div class="input">
-                        <select class="form-control" id="position" name="position">
+                        <select class="form-control" id="position" name="position"
+                                onfocus="this.defaultIndex=this.selectedIndex;"
+                                onchange="this.selectedIndex=this.defaultIndex;">
                             <option <?php echo "value=\"$position\""; ?>>Default</option>
                             <option value="tech">Technical Staff</option>
                             <option value="analyst">Analyst</option>
