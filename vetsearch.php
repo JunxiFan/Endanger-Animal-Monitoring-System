@@ -80,12 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         $DB_NAME = 'aqua';
                         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                        $sql = "select sensordata.SensorDataID, animal.AnimalID, standard.Name, sensor.sensorID, 
-                          sensordata.RecordDate, sensordata.Bloodpressure, sensordata.Bioelectricity, sensordata.PH
-                          from (((animal join standard on animal.TypeID = standard.TypeID)
-                          join sensor on animal.AnimalID = sensor.AnimalID)
-                          join sensordata on sensor.SensorID = sensordata.SensorID)
-                          where animal.AnimalID = $_POST[animalID];";
+                        $sql = "select * from sensordata_search where AnimalID = $_POST[animalID];";
                         $result = $mysqli->query($sql);
                         if (!$result) {
                             die('Could not get data: ' . mysql_error());

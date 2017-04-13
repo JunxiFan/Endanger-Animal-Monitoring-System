@@ -87,12 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         $DB_NAME = 'aqua';
                         $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                        $sql = "select collardata.CollarDataID, animal.AnimalID, standard.Name, collar.CollarID, 
-                          collardata.RecordDate, collardata.HeartBeat, collardata.Respire, collardata.Temperature, collardata.Location 
-                          from ((animal join standard on animal.TypeID = standard.TypeID)
-                          join collar on animal.AnimalID = collar.AnimalID)
-                          join collardata on collar.CollarID = collardata.CollarID
-                          where animal.AnimalID = $_POST[animalID]; ";
+                        $sql = "select * from collardata_search where AnimalID = $_POST[animalID]; ";
                         $result = $mysqli->query($sql);
                         if (!$result) {
                             die('Could not get data: ' . mysql_error());
@@ -118,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 echo "<td>$beat</td>";
                                 echo "<td>$respire</td>";
                                 echo "<td>$temp</td>";
-                                echo "<td>$location</td>";
+                                echo "<td><a href='https://www.google.com/maps/search/$location'>$location</a></td>";
                             }else{
                                 echo "<script>alert('Search Failed!'); history.go(-1);</script>";
                             }

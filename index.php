@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="donor.php"><span data-hover="Donor">Donor</span></a></li>
                     <li><a href="volunteer.php"><span data-hover="Volunteer">Volunteer</span></a></li>
                     <li><a href="about.php"><span data-hover="About">About</span></a></li>
-                    <li><a href="contact.php"><span data-hover="Contact">Contact</span></a></li>
+<!--                    <li><a href="contact.php"><span data-hover="Contact">Contact</span></a></li>-->
                 </ul>
                 <div class="clearfix"></div>
             </div><!-- /.navbar-collapse -->

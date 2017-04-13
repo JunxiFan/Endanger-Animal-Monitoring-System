@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <section id="tables">
             <div class="bs-docs-example">
-                <h3 style="text-align:center">Rescue</h3>
+                <h3 style="text-align:center">Sensor Data History</h3>
 
 
                 <table class="table table-striped">
@@ -74,12 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $DB_NAME = 'aqua';
                     $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                    $sql = "select sensordata.SensorDataID, animal.AnimalID, standard.Name, sensor.sensorID, 
-                          sensordata.RecordDate, sensordata.Bloodpressure, sensordata.Bioelectricity, sensordata.PH
-                          from ((animal join standard on animal.TypeID = standard.TypeID)
-                          join sensor on animal.AnimalID = sensor.AnimalID)
-                          join sensordata on sensor.SensorID = sensordata.SensorID
-                          where animal.AnimalID = '$_SESSION[animalID]';";
+                    $sql = "select * from sensordata_search where AnimalID = '$_SESSION[animalID]';";
                     $result = $mysqli->query($sql);
                     if (!$result) {
                         die('Could not get data: ' . mysql_error());
@@ -115,6 +110,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </tbody>
                 </table>
 
+
+                <h3 style="text-align:center">New Sensor Data</h3>
+
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Data ID</th>
+                        <th>Animal ID</th>
+
+                        <th>Record Date</th>
+                        <th>Blood Pressure</th>
+                        <th>Bioelectricity</th>
+                        <th>PH</th>
+
+                        <!--                    <th>Order Items</th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+
+
+
+                    $DB_HOST = 'localhost';
+                    $DB_PORT = '3306';
+                    $DB_USER = 'root';
+                    $DB_PASS = '';
+                    $DB_NAME = 'aqua';
+                    $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
+
+                    $sql = "select * from vet_view_newsensordata where AnimalID = '$_SESSION[animalID]';";
+                    $result = $mysqli->query($sql);
+                    if (!$result) {
+                        die('Could not get data: ' . mysql_error());
+                    }
+                    while ($animalInfo = mysqli_fetch_array($result)) {
+                        $dataID = $animalInfo[0];
+                        $animalID = $animalInfo[1];
+
+                        $rectime = $animalInfo[4];
+                        $bloodpressure = $animalInfo[5];
+                        $bioelec = $animalInfo[6];
+                        $ph = $animalInfo[7];
+//                        $location = $animalInfo[7];
+                        if ($dataID) {
+                            echo "<tr>";
+                            echo "<td><span class='badge'>$dataID</span></td>";
+                            echo "<td>$animalID</td>";
+
+                            echo "<td>$rectime</td>";
+                            echo "<td>$bloodpressure</td>";
+                            echo "<td>$bioelec</td>";
+                            echo "<td>$ph</td>";
+                        } else {
+                            echo "<script>alert('Search Failed!'); history.go(-1);</script>";
+                        }
+                        echo "</tr>";
+                    }
+
+                    ?>
+                    <!--						<tr><td><img src="Images/chineseknot/chineseknot.png" alt="item4" height="50px" width="80px"><br> Chineseknot 2</td></tr>	-->
+                    </tbody>
+                </table>
 
                 <form role="form" align="center" name="updateEmp" id="updateEmp" action="deals/vetresult.php"
                       method="post">

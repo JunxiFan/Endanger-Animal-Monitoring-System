@@ -73,9 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $DB_NAME = 'aqua';
                     $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                    $sql = "select sickanimal.SickID, sickanimal.AnimalID, standard.Name, animal.Name, sickanimal.Location
-                            from (animal join standard on animal.TypeID = standard.TypeID)
-                            join sickanimal on sickanimal.AnimalID = animal.AnimalID;";
+                    $sql = "select * from vet_view_sickanimal";
                     $result = $mysqli->query($sql);
                     if (!$result) {
                         die('Could not get data: ' . mysql_error());
@@ -96,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         echo "<td>$animalID</td>";
                         echo "<td>$typename</td>";
                         echo "<td>$name</td>";
-                        echo "<td>$location</td>";
+                        echo "<td><a href='https://www.google.com/maps/search/$location'>$location</a></td>";
 
 
                         echo "<td><a href='../vetrescue.php?animalID=" . $animalID . "'>Rescue</a></td>";

@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <br><br>
             <ul class="nav nav-pills nav-stacked main-menu text-center">
                 <li><a href="vetviewsick.php" target="readmore" onclick="display()"><i
-                            class="glyphicon glyphicon-edit"></i><span>&nbsp;Rescure</span></a>
+                            class="glyphicon glyphicon-edit"></i><span>&nbsp;Rescue</span></a>
                 </li>
                 <li><a href="vetsearch.php" target="readmore" onclick="display()"><i
                             class="glyphicon glyphicon-edit"></i><span>&nbsp;Search Sensor Data</span></a>

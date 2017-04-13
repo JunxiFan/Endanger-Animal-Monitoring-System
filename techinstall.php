@@ -67,8 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $DB_NAME = 'aqua';
                     $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                    $sql = "select animal.AnimalID, standard.Name, animal.Name 
-                            from animal join standard on animal.TypeID = standard.TypeID and animal.status ='0';";
+                    $sql = "select * from tech_install";
                     $result = $mysqli->query($sql);
                     if (!$result) {
                         die('Could not get data: ' . mysql_error());
